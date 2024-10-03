@@ -42,6 +42,49 @@ En la siguiente tabla de verdad, las columnas de **E3, E2, E1, E0** son las **en
 |   1    |   1    |   1    |   1    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
 
 
+En Markdown, no es posible aplicar sombreados o estilos avanzados de celdas de tabla de manera nativa, ya que Markdown está limitado a un formato de texto plano con capacidades básicas de formateo.
+
+Sin embargo, si el contenido se va a renderizar en un entorno que soporte HTML (como GitHub, Jupyter Notebooks, o algunos blogs), puedes combinar Markdown con HTML para obtener un mayor control sobre el estilo, incluyendo sombreados en columnas.
+
+Aquí tienes un ejemplo de cómo podrías hacerlo usando HTML dentro de Markdown:
+
+markdown
+Copiar código
+## Tabla con Sombreado en Columnas
+
+<table>
+  <thead>
+    <tr>
+      <th>Entradas</th>
+      <th style="background-color:#f0f0f0;">E3</th>
+      <th style="background-color:#f0f0f0;">E2</th>
+      <th style="background-color:#f0f0f0;">E1</th>
+      <th style="background-color:#f0f0f0;">E0</th>
+      <th>Salidas (0 = Encendido)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td style="background-color:#f0f0f0;">0</td>
+      <td style="background-color:#f0f0f0;">0</td>
+      <td style="background-color:#f0f0f0;">0</td>
+      <td style="background-color:#f0f0f0;">0</td>
+      <td>0000001</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td style="background-color:#f0f0f0;">0</td>
+      <td style="background-color:#f0f0f0;">0</td>
+      <td style="background-color:#f0f0f0;">0</td>
+      <td style="background-color:#f0f0f0;">1</td>
+      <td>1001111</td>
+    </tr>
+    <!-- Agrega más filas según sea necesario -->
+  </tbody>
+</table>
+
+
 ### Expresiones Lógicas de los Segmentos
 
 - **Segmento `a`**:   
