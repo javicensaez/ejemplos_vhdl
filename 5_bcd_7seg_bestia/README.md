@@ -16,7 +16,6 @@ El objetivo es controlar los segmentos `a`, `b`, `c`, `d`, `e`, `f`, y `g` del d
 
 Este proyecto utiliza un **display de 7 segmentos de ánodo común**. En este tipo de display, el ánodo (positivo) de todos los LED está conectado en común, y para encender un segmento es necesario aplicar un valor bajo (`0` lógico) en el pin correspondiente del segmento. Es decir, para encender un segmento, se debe aplicar un `0` en el terminal de salida.
 
---a-- | | f b | | --g-- | | e c | | --d--
 
 ## Tabla de Verdad
 
