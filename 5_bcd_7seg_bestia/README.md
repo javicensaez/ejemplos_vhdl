@@ -39,37 +39,39 @@ La siguiente tabla de verdad describe cómo los bits de entrada (`E3, E2, E1, E0
 |   1    |   1    |   1    |   0    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
 |   1    |   1    |   1    |   1    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
 
-## Expresiones Lógicas de los Segmentos
+### Expresiones Lógicas de los Segmentos
 
-A continuación, se presentan las expresiones lógicas simplificadas para cada uno de los segmentos del display de 7 segmentos, derivadas del análisis de la tabla de verdad:
+- **Segmento `a`**:  
+  \[
+  a = \overline{E0} \cdot \overline{E1} \cdot E2 + E0 \cdot \overline{E1} \cdot \overline{E2} \cdot \overline{E3}
+  \]
 
-- **Segmento `a`**: 
-  ```vhdl
-  a <= (not(E0) and not(E1) and E2) or (E0 and not(E1) and not(E2) and not(E3));
+- **Segmento `b`**:  
+  \[
+  b = \overline{E0} \cdot E1 \cdot E2 + E0 \cdot \overline{E1} \cdot E2
+  \]
 
-- **Segmento `b`**: 
-  ```vhdl
-b <= (not(E0) and E1 and E2) or (E0 and not(E1) and E2);
+- **Segmento `c`**:  
+  \[
+  c = \overline{E0} \cdot E1 \cdot \overline{E2}
+  \]
 
-- **Segmento `c`**: 
-  ```vhdl
-c <= (not(E0) and E1 and not(E2));
+- **Segmento `d`**:  
+  \[
+  d = \overline{E0} \cdot \overline{E1} \cdot E2 + E0 \cdot \overline{E1} \cdot \overline{E2} + E0 \cdot E1 \cdot E2
+  \]
 
-- **Segmento `d`**: 
-  ```vhdl
-  d <= (not(E0) and not(E1) and E2) or (E0 and not(E1) and not(E2)) or (E0 and E1 and E2);
+- **Segmento `e`**:  
+  \[
+  e = \overline{E1} \cdot E2 + E0
+  \]
 
+- **Segmento `f`**:  
+  \[
+  f = E1 \cdot \overline{E2} + E0 \cdot \overline{E2} \cdot \overline{E3} + E0 \cdot E1
+  \]
 
-- **Segmento `e`**: 
-  ```vhdl
-  e <= (not(E1) and E2) or E0;
-
-
-- **Segmento `f`**: 
-  ```vhdl
-  f <= (E1 and not(E2)) or (E0 and not(E2) and not(E3)) or (E0 and E1);
-
-
-- **Segmento `g`**: 
-  ```vhdl
-  g <= (not(E1) and not(E2) and not(E3)) or (E0 and E1 and E2);
+- **Segmento `g`**:  
+  \[
+  g = \overline{E1} \cdot \overline{E2} \cdot \overline{E3} + E0 \cdot E1 \cdot E2
+  \]
