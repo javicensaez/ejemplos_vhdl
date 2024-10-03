@@ -33,10 +33,10 @@ Este archivo define la **entidad principal** `base`, que instancia el componente
 
 - **Entradas**:
   - `G_CLOCK_50`: Señal de reloj de 50 MHz (no utilizada en este diseño).
-  - `V_SW`: Vector de 8 bits que representa los interruptores de la FPGA.
+  - `V_SW`: Vector de 10 bits que representa los interruptores de la FPGA.
   
 - **Salidas**:
-  - `G_LED`: Vector de 8 bits que controla los LEDs de la FPGA.
+  - `G_LED`: Vector de 10 bits que controla los LEDs de la FPGA.
   - `G_HEX0`: Vector de 7 bits que controla los segmentos del display de 7 segmentos.
 
 **Jerarquía**: 
