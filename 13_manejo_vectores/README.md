@@ -37,7 +37,9 @@ En este caso:
 
 others => input_4bits(3): Extiende el bit de signo (input_4bits(3)) a varios bits.
 &: Concatena los bits de signo con los 4 bits originales.
-Uso de Comillas Simples y Dobles
+
+### Uso de Comillas Simples y Dobles
+
 Comillas simples (' ') se utilizan para bits individuales:
 
 ```vhdl
@@ -57,8 +59,12 @@ Extensión de Signo: En el archivo sign_extension.vhd, se extiende el bit más s
 
 Concatenación: En el archivo swap_half_byte.vhd, se intercambian los bits superiores e inferiores de un byte de 8 bits:
 
+```vhdl
 G_LED <= lower_bits & upper_bits;  -- Intercambiar parte baja y alta
+```
 
 Inversión de Bits: En el archivo invert_bits.vhd, se invierte el orden de los bits en un vector:
 
+```vhdl
 G_LED <= V_SW(0 to 9);  -- Invierte los bits
+```
