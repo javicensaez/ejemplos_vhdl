@@ -57,7 +57,9 @@ Comillas dobles (" ") se utilizan para vectores de bits o cadenas de bits:
 Ejemplos Prácticos
 Extensión de Signo: En el archivo sign_extension.vhd, se extiende el bit más significativo de un número de 4 bits a un número de 8 bits. Si el bit más significativo es 0, se llena con ceros, si es 1, se llena con unos.
 
-Concatenación: En el archivo swap_half_byte.vhd, se intercambian los bits superiores e inferiores de un byte de 8 bits:
+### Concatenación: 
+
+En el archivo swap_half_byte.vhd, se intercambian los bits superiores e inferiores de un byte de 8 bits:
 
 ```vhdl
 G_LED <= lower_bits & upper_bits;  -- Intercambiar parte baja y alta
