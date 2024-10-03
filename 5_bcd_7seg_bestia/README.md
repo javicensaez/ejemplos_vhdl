@@ -16,28 +16,33 @@ El objetivo es controlar los segmentos `a`, `b`, `c`, `d`, `e`, `f`, y `g` del d
 
 Este proyecto utiliza un **display de 7 segmentos de ánodo común**. En este tipo de display, el ánodo (positivo) de todos los LED está conectado en común, y para encender un segmento es necesario aplicar un valor bajo (`0` lógico) en el pin correspondiente del segmento. Es decir, para encender un segmento, se debe aplicar un `0` en el terminal de salida.
 
+--a-- | | f b | | --g-- | | e c | | --d--
+
 ## Tabla de Verdad
 
-La siguiente tabla de verdad describe cómo los bits de entrada (`E3, E2, E1, E0`), que corresponden a los interruptores, determinan los segmentos del display que se encenderán para representar los dígitos del 0 al 9. Para las combinaciones no utilizadas, las salidas de los segmentos se marcarán como `x`.
+En la siguiente tabla de verdad, las columnas de **E3, E2, E1, E0** son las **entradas** que representan el estado de los interruptores. Las columnas **a, b, c, d, e, f, g** son las **salidas**, donde **0** indica que el segmento está encendido y **1** indica que está apagado, ya que es un display de **ánodo común**.
 
+| **Entradas**                | **Salidas (0 = Encendido)**               |
+|-----------------------------|-------------------------------------------|
 | **E3** | **E2** | **E1** | **E0** | **a** | **b** | **c** | **d** | **e** | **f** | **g** |
 |--------|--------|--------|--------|-------|-------|-------|-------|-------|-------|-------|
-|   0    |   0    |   0    |   0    |   1   |   1   |   1   |   1   |   1   |   1   |   0   |  --> 0
-|   0    |   0    |   0    |   1    |   0   |   1   |   1   |   0   |   0   |   0   |   0   |  --> 1
-|   0    |   0    |   1    |   0    |   1   |   1   |   0   |   1   |   1   |   0   |   1   |  --> 2
-|   0    |   0    |   1    |   1    |   1   |   1   |   1   |   1   |   0   |   0   |   1   |  --> 3
-|   0    |   1    |   0    |   0    |   0   |   1   |   1   |   0   |   0   |   1   |   1   |  --> 4
-|   0    |   1    |   0    |   1    |   1   |   0   |   1   |   1   |   0   |   1   |   1   |  --> 5
-|   0    |   1    |   1    |   0    |   1   |   0   |   1   |   1   |   1   |   1   |   1   |  --> 6
-|   0    |   1    |   1    |   1    |   1   |   1   |   1   |   0   |   0   |   0   |   0   |  --> 7
-|   1    |   0    |   0    |   0    |   1   |   1   |   1   |   1   |   1   |   1   |   1   |  --> 8
-|   1    |   0    |   0    |   1    |   1   |   1   |   1   |   1   |   0   |   1   |   1   |  --> 9
+|   0    |   0    |   0    |   0    |   0   |   0   |   0   |   0   |   0   |   0   |   1   |  --> 0
+|   0    |   0    |   0    |   1    |   1   |   0   |   0   |   1   |   1   |   1   |   1   |  --> 1
+|   0    |   0    |   1    |   0    |   0   |   0   |   1   |   0   |   0   |   1   |   0   |  --> 2
+|   0    |   0    |   1    |   1    |   0   |   0   |   0   |   0   |   1   |   1   |   0   |  --> 3
+|   0    |   1    |   0    |   0    |   1   |   0   |   0   |   1   |   1   |   0   |   0   |  --> 4
+|   0    |   1    |   0    |   1    |   0   |   1   |   0   |   0   |   1   |   0   |   0   |  --> 5
+|   0    |   1    |   1    |   0    |   0   |   1   |   0   |   0   |   0   |   0   |   0   |  --> 6
+|   0    |   1    |   1    |   1    |   0   |   0   |   0   |   1   |   1   |   1   |   1   |  --> 7
+|   1    |   0    |   0    |   0    |   0   |   0   |   0   |   0   |   0   |   0   |   0   |  --> 8
+|   1    |   0    |   0    |   1    |   0   |   0   |   0   |   0   |   1   |   0   |   0   |  --> 9
 |   1    |   0    |   1    |   0    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
 |   1    |   0    |   1    |   1    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
 |   1    |   1    |   0    |   0    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
 |   1    |   1    |   0    |   1    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
 |   1    |   1    |   1    |   0    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
 |   1    |   1    |   1    |   1    |   x   |   x   |   x   |   x   |   x   |   x   |   x   |  --> x
+
 
 ### Expresiones Lógicas de los Segmentos
 
