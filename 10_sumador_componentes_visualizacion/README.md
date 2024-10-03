@@ -67,7 +67,7 @@ Este archivo es el **módulo principal** que conecta el sumador, el decodificado
   - `V_SW`: Interruptores de entrada (8 bits).
 - **Salidas**:
   - `G_HEX0`: Display de 7 segmentos para las unidades.
-  - `G_HEX2`: Display de 7 segmentos para las decenas.
+  - `G_HEX1`: Display de 7 segmentos para las decenas.
 
 ```vhdl
 {files_content['main.vhd']}
