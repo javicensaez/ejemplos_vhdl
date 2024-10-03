@@ -21,8 +21,7 @@ Este proyecto utiliza un **display de 7 segmentos de ánodo común**. En este ti
 
 En la siguiente tabla de verdad, las columnas de **E3, E2, E1, E0** son las **entradas** que representan el estado de los interruptores. Las columnas **a, b, c, d, e, f, g** son las **salidas**, donde **0** indica que el segmento está encendido y **1** indica que está apagado, ya que es un display de **ánodo común**.
 
-| **Entradas**                | **Salidas (0 = Encendido)**               |
-|-----------------------------|-------------------------------------------|
+
 | **E3** | **E2** | **E1** | **E0** | **a** | **b** | **c** | **d** | **e** | **f** | **g** |
 |--------|--------|--------|--------|-------|-------|-------|-------|-------|-------|-------|
 |   0    |   0    |   0    |   0    |   0   |   0   |   0   |   0   |   0   |   0   |   1   |  --> 0
