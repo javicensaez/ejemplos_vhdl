@@ -1,18 +1,18 @@
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
 
--- Declaracion del nuevo componente para decodificar BCD a 7 segmentos
-entity BCD_to_7segment_vector is
-    Port (
-        bcd_in : in STD_LOGIC_VECTOR(3 downto 0);  -- Entrada de 4 bits para el valor en BCD
-        seg_out : out STD_LOGIC_VECTOR(6 downto 0) -- Salida de 7 bits para controlar los segmentos de a a g
+-- Entidad del decodificador BCD a 7 segmentos
+entity bcd_to_7seg is
+    port (
+        bcd_in : in std_logic_vector(3 downto 0);  -- Entrada BCD (4 bits)
+        seg_out : out std_logic_vector(6 downto 0) -- Salida para los 7 segmentos (a, b, c, d, e, f, g)
     );
-end BCD_to_7segment_vector;
+end bcd_to_7seg;
 
-architecture Behavioral of BCD_to_7segment_vector is
+-- Arquitectura del decodificador
+architecture rtl of bcd_to_7seg is
 begin
-    -- Lógica para decodificar el valor BCD y controlar los segmentos del display
     process(bcd_in)
     begin
         case bcd_in is
@@ -29,4 +29,4 @@ begin
             when others => seg_out <= "1111111"; -- Deshabilitar segmentos
         end case;
     end process;
-end Behavioral;
+end rtl;
