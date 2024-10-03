@@ -42,9 +42,7 @@ La siguiente tabla de verdad describe cómo los bits de entrada (`E3, E2, E1, E0
 ### Expresiones Lógicas de los Segmentos
 
 - **Segmento `a`**:  
-  $\[
-  a = \overline{E0} \cdot \overline{E1} \cdot E2 + E0 \cdot \overline{E1} \cdot \overline{E2} \cdot \overline{E3}
-  \]$
+  $a = \overline{E0} \cdot \overline{E1} \cdot E2 + E0 \cdot \overline{E1} \cdot \overline{E2} \cdot \overline{E3}$
 
 - **Segmento `b`**:  
   $\[
