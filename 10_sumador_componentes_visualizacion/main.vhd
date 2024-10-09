@@ -3,7 +3,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 -- Importar la declaración de los componentes
-use work.components_declaration.all;
+use work.paquete.all;
 
 -- Entidad principal que conecta el sumador, decodificador binario a BCD y displays de 7 segmentos
 entity main is
