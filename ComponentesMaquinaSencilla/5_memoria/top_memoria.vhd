@@ -48,16 +48,16 @@ begin
         en,                 -- Señal de habilitación de la memoria
         we,                 -- Señal de habilitación de escritura
         addra,              -- Dirección para el puerto A
+        addrb,              -- Dirección para el puerto B 
         di,                 -- Datos de entrada para escribir
-        (others => '0'),    -- Dirección para el puerto B (no se utiliza, se asigna 0)
-        open,               -- Salida del puerto B (no se utiliza)
-        doa                 -- Salida del puerto A
+        doa,               -- Salida del puerto A
+        dob                 -- Salida del puerto B (no se utiliza)
     );
 
     -- Conexión de señales
     clk    <= G_CLOCK_50;                        -- Conexión del reloj principal
-    en     <= V_BT(0);                           -- Habilitación de la memoria controlada por el botón 0
-    we     <= V_BT(1);                           -- Habilitación de escritura controlada por el botón 1
+    en     <= not V_BT(0);                           -- Habilitación de la memoria controlada por el botón 0
+    we     <= not V_BT(1);                           -- Habilitación de escritura controlada por el botón 1
     addra <= "00" & V_SW(9 downto 5);            -- Dirección para el puerto A controlada por los interruptores del 9 al 5
     di <= "00000000000" & V_SW(4 downto 0);      -- Datos de entrada a escribir controlados por los interruptores del 4 al 0
 

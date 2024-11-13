@@ -68,7 +68,7 @@ Rellena la siguiente tabla indicando el código máquina necesario para implemen
 
 | Dirección | Ensamblador         | Código Operación | Dirección Origen | Dirección Destino | Instrucción en Hexadecimal |
 | --------- | ------------------- | ---------------- | ---------------- | ----------------- | -------------------------- |
-| 0         | MOV Zero, Resultado | 10               | 0001011          | 0001100           | 4C18                       |
+| 0         | MOV Zero, Resultado | 10               | 0001011          | 0001101           | 858D                       |
 | 1         | MOV Zero, i         |                  |                  |                   |                            |
 | 2         | CMP i, b            |                  |                  |                   |                            |
 | 3         | BEQ end             |                  |                  |                   |                            |
