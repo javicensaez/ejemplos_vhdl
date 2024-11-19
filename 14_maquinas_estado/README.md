@@ -87,6 +87,7 @@ begin
         estado <= "00"; -- Reinicia al estado inicial
     end if;
 end process;
+```
 
 ## Salida a Display de 7 Segmentos
 
@@ -111,6 +112,7 @@ begin
         when "11" => G_HEX0 <= "0000110"; -- Muestra 3
     end case;
 end process;
+```
 
 ## Características Clave
 
