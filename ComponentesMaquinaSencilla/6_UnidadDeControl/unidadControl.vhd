@@ -22,7 +22,8 @@ entity unidadControl is
           carga_ra: out STD_LOGIC;           
           carga_rb: out STD_LOGIC;    
           carga_rfz: out STD_LOGIC;      
-          rst : in STD_LOGIC -- Señal de estado de la unidad de control
+          rst : in STD_LOGIC;
+          estado: out STD_LOGIC_VECTOR (2 downto 0) 
   );
 end unidadControl;
 
