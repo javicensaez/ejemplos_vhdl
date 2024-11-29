@@ -13,7 +13,8 @@ port (clk  : in std_logic;
         addrb: in std_logic_vector(6 downto 0);  
         di     : in std_logic_vector(15 downto 0);   
         doa     : out std_logic_vector(15 downto 0);   
-        dob     : out std_logic_vector(15 downto 0))   
+        dob     : out std_logic_vector(15 downto 0)
+     );   
 end component;
 
 component ALU IS
